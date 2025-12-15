@@ -165,3 +165,47 @@ This system provides decision support only.
 It does not replace professional advice and does not guarantee outcomes.
 
 Its purpose is to reduce unnecessary frustration by improving early-stage decisions.
+---
+
+## How This System Would Be Used (Conceptually)
+
+In a practical implementation, the system would operate as follows:
+
+1. A user completes a structured diagnostic form.
+2. The system interprets qualitative signals across four diagnostic modules.
+3. Misaligned AI paths are eliminated sequentially.
+4. The user receives a written decision report explaining:
+   - the recommended path,
+   - alternative considerations (if any),
+   - and why other paths were eliminated.
+
+The system is intentionally designed to produce a **report**, not an interactive chat, to encourage reflection rather than impulsive decision-making.
+
+---
+
+## Limitations & Non-Goals
+
+This project intentionally avoids:
+
+- predicting job market outcomes,
+- guaranteeing career success,
+- replacing human judgment,
+- optimizing for speed or scale,
+- acting as a personalized mentor or coach.
+
+The system’s scope is limited to **early-stage decision support** and is not suitable for advanced technical career planning.
+
+---
+
+## Portfolio Context
+
+This project was created as a portfolio case study to demonstrate:
+
+- decision system design,
+- qualitative reasoning without scoring,
+- ethical AI boundaries,
+- clarity of scope definition,
+- and structured problem-solving.
+
+It emphasizes **thinking and architecture over tooling**, reflecting how real-world AI systems are often designed before implementation.
+
