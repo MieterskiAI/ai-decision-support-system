@@ -140,22 +140,24 @@ A detailed explanation of the decision logic and elimination heuristics is docum
 
 ## Project Status
 
-Current version: **v0.1 (conceptual & logic-complete)**
+**Current version:** v0.2  
+**Status:** Functional prototype (end-to-end tested)
 
-At this stage, the project focuses on:
-- decision logic,
-- system structure,
-- ethical and realistic communication.
+The system includes:
+- a structured diagnostic form,
+- automated decision logic,
+- and AI-generated decision reports.
 
-Technology implementation is intentionally deferred.
+The full decision pipeline has been implemented and validated using a form-based input and automated report generation.
+
 
 ---
 
 ## Roadmap (High-Level)
 
-- v0.1 – Decision logic and example outputs ✔
-- v0.2 – Interactive input format (forms / structured input)
-- v0.3 – Lightweight automation or web-based interface
+v0.1 – Decision logic and example outputs ✔  
+v0.2 – Interactive input + automated report generation ✔  
+v0.3 – Optional UI or visualization layer (conceptual)
 
 ---
 
@@ -208,4 +210,5 @@ This project was created as a portfolio case study to demonstrate:
 - and structured problem-solving.
 
 It emphasizes **thinking and architecture over tooling**, reflecting how real-world AI systems are often designed before implementation.
+This project includes a working automation pipeline used to generate real decision reports based on structured user input.
 
