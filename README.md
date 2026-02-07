@@ -87,6 +87,21 @@ No scoring, ranking, or user comparison is performed.
 
 ---
 
+## Quick Start / How it works
+
+1. Review scope and non-goals to ensure this fits early-stage career exploration.
+2. Collect structured input across the four diagnostic modules.
+3. Normalize notes into short, qualitative signals per module.
+4. Run module-by-module elimination (hard stops first, then risk flags).
+5. Keep viable paths and document why others were removed.
+6. If signals conflict or are insufficient, recommend iteration.
+7. Draft a decision report that explains the recommendation plainly.
+8. Include alternatives and conditions for revisiting eliminated paths.
+9. Share the report as a reflection aid (not a final verdict).
+10. Keep the human in the loop for judgment and context.
+
+---
+
 ## Diagnostic Modules
 
 The decision logic is based on four diagnostic modules:
@@ -129,12 +144,20 @@ An example case study and report output can be found here:
 - [`docs/case-study-pan-m.md`](docs/case-study-pan-m.md)
 - [`docs/example-report.md`](docs/example-report.md)
 
+Example input/output walkthroughs live in [`examples/`](examples/):
+- [`examples/sample_input.json`](examples/sample_input.json)
+- [`examples/walkthrough.md`](examples/walkthrough.md)
+- [`examples/sample_output.md`](examples/sample_output.md)
+
 ---
 
 ## Decision Logic
 
 A detailed explanation of the decision logic and elimination heuristics is documented here:
 - [`docs/decision-logic.md`](docs/decision-logic.md)
+
+Decision flow diagram:
+- [`docs/architecture.mmd`](docs/architecture.mmd)
 
 ---
 
@@ -199,6 +222,26 @@ The system’s scope is limited to **early-stage decision support** and is not s
 
 ---
 
+## Validation / How I tested it
+
+Current validation is lightweight and qualitative:
+- **2 documented walkthroughs** (case study + example report) reviewed end-to-end for alignment with elimination rules.
+- **Manual trace checks**: inputs → signals → eliminations → report wording.
+- **Consistency pass** to confirm no scoring, ranking, or “best path” language.
+
+This is intentionally a human-in-the-loop check rather than a benchmarked model evaluation.
+
+---
+
+## Impact / Why this matters
+
+This approach helps people avoid spending months on misaligned AI paths.
+It makes uncertainty explicit and keeps recommendations grounded in observable signals.
+It preserves user agency by requiring human judgment and reflection.
+It reduces wasted effort without promising outcomes or pretending automation is infallible.
+
+---
+
 ## Portfolio Context
 
 This project was created as a portfolio case study to demonstrate:
@@ -212,3 +255,9 @@ This project was created as a portfolio case study to demonstrate:
 It emphasizes **thinking and architecture over tooling**, reflecting how real-world AI systems are often designed before implementation.
 This project includes a working automation pipeline used to generate real decision reports based on structured user input.
 
+---
+
+## Portfolio Audit
+
+A focused audit of this repository as a portfolio case study (strengths, gaps, and recommended improvements) lives here:
+- [`docs/portfolio-audit.md`](docs/portfolio-audit.md)

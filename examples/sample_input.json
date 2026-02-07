@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "age_range": "25-45",
+    "background": "non-technical",
+    "goal_timeline_months": 9
+  },
+  "module_1_context": {
+    "prior_ai_exposure": "light",
+    "motivation": "career change",
+    "constraints": ["family commitments", "limited study time"]
+  },
+  "module_2_work_style": {
+    "prefers_structure": true,
+    "enjoys_exploration": false,
+    "likes_explaining": true
+  },
+  "module_3_tolerance": {
+    "debugging_tolerance": "medium",
+    "ambiguity_tolerance": "low",
+    "frustration_triggers": ["unclear requirements"]
+  },
+  "module_4_expectations": {
+    "weekly_hours": 6,
+    "short_term_success": "first paid pilot",
+    "learning_budget": "low"
+  }
+}
