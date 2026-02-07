@@ -1,0 +1,22 @@
+flowchart TD
+    A[Structured input
+(4 diagnostic modules)] --> B[Signal normalization
+(qualitative notes)]
+    B --> C{Module-by-module
+elimination}
+    C -->|Hard stop| D[Remove path]
+    C -->|Risk flag| E[Keep path
+(marked high risk)]
+    C -->|Support signal| F[Keep path
+(aligned)]
+    D --> G[Remaining viable paths]
+    E --> G
+    F --> G
+    G --> H{Signals sufficient?}
+    H -->|Yes| I[Recommend main path
++ alternatives]
+    H -->|No| J[Recommend iteration
+/ more data]
+    I --> K[Decision report
+(human-in-the-loop)]
+    J --> K
