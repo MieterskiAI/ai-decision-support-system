@@ -6,6 +6,18 @@ This project focuses on decision quality, not skill training.
 
 ---
 
+## Suggested GitHub About & Topics
+
+**GitHub About (1 line):**  
+Documentation-led decision-support: signals → elimination heuristics → decision report (human-in-the-loop).
+
+**Topics (tags):**  
+decision-support, human-in-the-loop, process-design, heuristics, documentation, portfolio, ops, reporting
+
+*Note: About/Topics are set in the GitHub UI (not via git).*
+
+---
+
 ## Problem
 
 Many people who want to enter the AI field struggle not because of a lack of motivation, but because of poor initial decisions:
@@ -149,6 +161,8 @@ Example input/output walkthroughs live in [`examples/`](examples/):
 - [`examples/walkthrough.md`](examples/walkthrough.md)
 - [`examples/sample_output.md`](examples/sample_output.md)
 
+All examples are synthetic and for illustration only.
+
 ---
 
 ## Decision Logic
@@ -164,14 +178,9 @@ Decision flow diagram:
 ## Project Status
 
 **Current version:** v0.2  
-**Status:** Functional prototype (end-to-end tested)
+**Status:** Documentation-led functional prototype of the decision framework (examples + decision reports), not an executable system.
 
-The system includes:
-- a structured diagnostic form,
-- automated decision logic,
-- and AI-generated decision reports.
-
-The full decision pipeline has been implemented and validated using a form-based input and automated report generation.
+This repo documents the decision-support method and provides example artifacts. It does not ship a runnable pipeline or automated report generation.
 
 
 ---
@@ -179,7 +188,7 @@ The full decision pipeline has been implemented and validated using a form-based
 ## Roadmap (High-Level)
 
 v0.1 – Decision logic and example outputs ✔  
-v0.2 – Interactive input + automated report generation ✔  
+v0.2 – Interactive input + automated report generation (conceptual)  
 v0.3 – Optional UI or visualization layer (conceptual)
 
 ---
@@ -253,7 +262,12 @@ This project was created as a portfolio case study to demonstrate:
 - and structured problem-solving.
 
 It emphasizes **thinking and architecture over tooling**, reflecting how real-world AI systems are often designed before implementation.
-This project includes a working automation pipeline used to generate real decision reports based on structured user input.
+
+### What this proves
+
+- process mapping from inputs → signals → eliminations,
+- decision heuristics that prioritize auditability and human judgment,
+- structured documentation that keeps scope, limits, and artifacts explicit.
 
 ---
 
