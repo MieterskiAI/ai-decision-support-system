@@ -1,277 +1,84 @@
 # AI Decision Support System
 
-An AI-based Decision Support System designed to help non-technical or semi-technical individuals choose a realistic and well-aligned entry path into the AI field.
+## 1. Problem
+People starting in AI often choose a path too early, based on hype or incomplete self-assessment. That leads to mismatched learning plans, frustration, and wasted effort.
 
-This project focuses on decision quality, not skill training.
+## 2. Solution (high level)
+This repository documents a **human-in-the-loop decision-support workflow** that helps narrow AI entry paths using structured qualitative signals and elimination heuristics.
 
----
+> **Status / Disclaimer:** This is a documentation-led portfolio case study, **not a runnable automated system or pipeline**. The Power Platform content below is a **conceptual mapping**, not a claim of a built production solution.
 
-## Suggested GitHub About & Topics
+## 3. Workflow (step-by-step)
+1. Collect structured inputs across four diagnostic modules.
+2. Convert notes into qualitative signals (not scores).
+3. Apply elimination logic path-by-path.
+4. Flag ambiguity or conflict when signals are weak.
+5. Produce a recommendation + alternatives + conditions.
+6. Keep final judgment with a human reviewer.
 
-**GitHub About (1 line):**  
-Documentation-led decision-support: signals → elimination heuristics → decision report (human-in-the-loop).
+Detailed workflow:
+- [`docs/workflow.md`](docs/workflow.md)
+- Decision logic: [`docs/decision-logic.md`](docs/decision-logic.md)
+- Decision flow diagram: [`docs/architecture.mmd`](docs/architecture.mmd)
 
-**Topics (tags):**  
-decision-support, human-in-the-loop, process-design, heuristics, documentation, portfolio, ops, reporting
+## 4. Inputs / Outputs
+**Inputs**
+- Profile context and constraints.
+- Work-style preferences.
+- Frustration/ambiguity tolerance.
+- Expectations and available resources.
 
-*Note: About/Topics are set in the GitHub UI (not via git).*
+**Outputs**
+- Decision report with:
+  - recommended path,
+  - eliminated paths and rationale,
+  - alternatives/conditional options,
+  - explicit human review reminder.
 
----
-
-## Problem
-
-Many people who want to enter the AI field struggle not because of a lack of motivation, but because of poor initial decisions:
-- random roadmaps,
-- misaligned courses,
-- unrealistic expectations,
-- and a lack of understanding of what different AI roles actually involve.
-
-This often leads to frustration, wasted time, and premature abandonment of learning efforts.
-
----
-
-## Why This Project Exists
-
-Most existing tools focus on:
-- teaching AI skills,
-- motivational coaching,
-- or generic career advice.
-
-This project addresses a different problem:
-
-**Helping users make a *good first decision* before committing months of effort.**
-
-The system does not promise success, employment, or mastery.
-It supports informed, realistic decision-making.
-
----
-
-## What This System Is / Is Not
-
-### This system IS:
-- a structured diagnostic process,
-- a decision support tool (not a decision maker),
-- based on qualitative heuristics rather than scoring,
-- focused on eliminating misaligned paths,
-- designed for early-stage AI career exploration.
-
-### This system IS NOT:
-- a chatbot mentor,
-- a personality test,
-- a coaching platform,
-- a learning platform,
-- a guarantee of results.
-
----
-
-## Target User (v0.1 Scope)
-
-The system is designed exclusively for:
-- individuals aged ~25–45,
-- non-technical or semi-technical backgrounds,
-- no clearly defined AI career path,
-- aiming to enter AI within 6–12 months,
-- feeling pressure to “choose the right direction”.
-
-The system is **not** designed for:
-- senior developers,
-- ML researchers,
-- advanced data scientists,
-- users seeking guaranteed outcomes.
-
----
-
-## High-Level Architecture
-
-The system operates in three conceptual phases:
-
-1. **Signal Collection**  
-   User input is collected through structured diagnostic modules.
-
-2. **Path Elimination**  
-   Misaligned AI paths are removed based on qualitative heuristics.
-
-3. **Recommendation or Iteration**  
-   - One main path is recommended when possible.
-   - If signals are insufficient or conflicting, iteration is suggested.
-
-No scoring, ranking, or user comparison is performed.
-
----
-
-## Quick Start / How it works
-
-1. Review scope and non-goals to ensure this fits early-stage career exploration.
-2. Collect structured input across the four diagnostic modules.
-3. Normalize notes into short, qualitative signals per module.
-4. Run module-by-module elimination (hard stops first, then risk flags).
-5. Keep viable paths and document why others were removed.
-6. If signals conflict or are insufficient, recommend iteration.
-7. Draft a decision report that explains the recommendation plainly.
-8. Include alternatives and conditions for revisiting eliminated paths.
-9. Share the report as a reflection aid (not a final verdict).
-10. Keep the human in the loop for judgment and context.
-
----
-
-## Diagnostic Modules
-
-The decision logic is based on four diagnostic modules:
-
-1. **Context & Starting Point**  
-   Background, experience, and motivation.
-
-2. **Cognitive & Work Style**  
-   Structure vs. creativity, preference for ambiguity, working patterns.
-
-3. **Frustration & Abstraction Tolerance**  
-   Reaction to uncertainty, debugging, and lack of clear rules.
-
-4. **Expectations & Available Resources**  
-   Time, learning horizon, and definition of short-term success.
-
----
-
-## AI Paths Considered (v0.1)
-
-The system evaluates up to four AI entry paths:
-
-- AI Automation / AI Operations  
-- Prompt Engineering / AI Interaction Design  
-- AI Engineering (light – integrations, RAG, APIs)  
-- AI Consulting / Implementation
-
-Each path includes explicit reasoning for:
-- why it is recommended,
-- why it is not recommended,
-- or why it may be viable later.
-
----
-
-## Example Output
-
-The system produces a **decision report**, not a chat conversation.
-
-An example case study and report output can be found here:
-- [`docs/case-study-pan-m.md`](docs/case-study-pan-m.md)
+Examples:
+- [`examples/synthetic_input.json`](examples/synthetic_input.json)
+- [`examples/quick_walkthrough.md`](examples/quick_walkthrough.md)
+- [`examples/synthetic_output.md`](examples/synthetic_output.md)
 - [`docs/example-report.md`](docs/example-report.md)
 
-Example input/output walkthroughs live in [`examples/`](examples/):
-- [`examples/sample_input.json`](examples/sample_input.json)
-- [`examples/walkthrough.md`](examples/walkthrough.md)
-- [`examples/sample_output.md`](examples/sample_output.md)
+## 5. Edge cases
+The workflow handles low-confidence scenarios explicitly, including insufficient, conflicting, or ambiguous signals, plus iteration/re-entry.
 
-All examples are synthetic and for illustration only.
+Details:
+- [`docs/edge-cases.md`](docs/edge-cases.md)
 
----
+## 6. KPIs (planned)
+No measured KPI outcomes are claimed in this repo. KPI definitions are provided as **PLANNED** metrics for future implementation.
 
-## Decision Logic
+Details:
+- [`docs/metrics.md`](docs/metrics.md)
 
-A detailed explanation of the decision logic and elimination heuristics is documented here:
-- [`docs/decision-logic.md`](docs/decision-logic.md)
+## 7. Quick demo (how to read/use the example artifacts in this repo)
+1. Open synthetic input: [`examples/synthetic_input.json`](examples/synthetic_input.json).
+2. Read walkthrough: [`examples/quick_walkthrough.md`](examples/quick_walkthrough.md).
+3. Compare with synthetic output report: [`examples/synthetic_output.md`](examples/synthetic_output.md).
+4. Cross-check logic in [`docs/decision-logic.md`](docs/decision-logic.md).
 
-Decision flow diagram:
-- [`docs/architecture.mmd`](docs/architecture.mmd)
+All `synthetic_*` artifacts are explicitly synthetic examples for portfolio demonstration.
 
----
+## 8. Power Platform mapping (conceptual implementation)
+If translated to Microsoft Power Platform (conceptually):
+- **Power Apps**: guided intake form for the four diagnostic modules.
+- **Power Automate**: orchestrates stages (signal normalization, elimination checks, draft report assembly).
+- **Dataverse / SharePoint lists**: stores intake records, rule snapshots, and review outcomes.
+- **Human approval step**: reviewer confirms/edits recommendation before sharing.
+- **Document output**: report template populated and exported for user reflection.
 
-## Project Status
+This mapping describes implementation intent only; it does not claim this repo contains a built Power Platform app/flow.
 
-**Current version:** v0.2  
-**Status:** Documentation-led functional prototype of the decision framework (examples + decision reports), not an executable system.
+## 9. What this proves (skills demonstrated)
+- Business-process thinking: clear stages, entry/exit conditions, and traceable decisions.
+- Automation design readiness: workflow decomposed into steps suitable for Power Automate.
+- Human-in-the-loop control: explicit review checkpoints instead of blind automation.
+- Documentation quality: decision logic, architecture, examples, and edge-case handling are auditable.
+- Portfolio maturity: scope boundaries and non-goals are clearly stated.
 
-This repo documents the decision-support method and provides example artifacts. It does not ship a runnable pipeline or automated report generation.
-
-
----
-
-## Roadmap (High-Level)
-
-v0.1 – Decision logic and example outputs ✔  
-v0.2 – Interactive input + automated report generation (conceptual)  
-v0.3 – Optional UI or visualization layer (conceptual)
-
----
-
-## Disclaimer
-
-This system provides decision support only.
-It does not replace professional advice and does not guarantee outcomes.
-
-Its purpose is to reduce unnecessary frustration by improving early-stage decisions.
----
-
-## How This System Would Be Used (Conceptually)
-
-In a practical implementation, the system would operate as follows:
-
-1. A user completes a structured diagnostic form.
-2. The system interprets qualitative signals across four diagnostic modules.
-3. Misaligned AI paths are eliminated sequentially.
-4. The user receives a written decision report explaining:
-   - the recommended path,
-   - alternative considerations (if any),
-   - and why other paths were eliminated.
-
-The system is intentionally designed to produce a **report**, not an interactive chat, to encourage reflection rather than impulsive decision-making.
-
----
-
-## Limitations & Non-Goals
-
-This project intentionally avoids:
-
-- predicting job market outcomes,
-- guaranteeing career success,
-- replacing human judgment,
-- optimizing for speed or scale,
-- acting as a personalized mentor or coach.
-
-The system’s scope is limited to **early-stage decision support** and is not suitable for advanced technical career planning.
-
----
-
-## Validation / How I tested it
-
-Current validation is lightweight and qualitative:
-- **2 documented walkthroughs** (case study + example report) reviewed end-to-end for alignment with elimination rules.
-- **Manual trace checks**: inputs → signals → eliminations → report wording.
-- **Consistency pass** to confirm no scoring, ranking, or “best path” language.
-
-This is intentionally a human-in-the-loop check rather than a benchmarked model evaluation.
-
----
-
-## Impact / Why this matters
-
-This approach helps people avoid spending months on misaligned AI paths.
-It makes uncertainty explicit and keeps recommendations grounded in observable signals.
-It preserves user agency by requiring human judgment and reflection.
-It reduces wasted effort without promising outcomes or pretending automation is infallible.
-
----
-
-## Portfolio Context
-
-This project was created as a portfolio case study to demonstrate:
-
-- decision system design,
-- qualitative reasoning without scoring,
-- ethical AI boundaries,
-- clarity of scope definition,
-- and structured problem-solving.
-
-It emphasizes **thinking and architecture over tooling**, reflecting how real-world AI systems are often designed before implementation.
-
-### What this proves
-
-- process mapping from inputs → signals → eliminations,
-- decision heuristics that prioritize auditability and human judgment,
-- structured documentation that keeps scope, limits, and artifacts explicit.
-
----
-
-## Portfolio Audit
-
-A focused audit of this repository as a portfolio case study (strengths, gaps, and recommended improvements) lives here:
+Related context:
+- [`docs/case-study-pan-m.md`](docs/case-study-pan-m.md)
 - [`docs/portfolio-audit.md`](docs/portfolio-audit.md)
+- [`roadmap.md`](roadmap.md)

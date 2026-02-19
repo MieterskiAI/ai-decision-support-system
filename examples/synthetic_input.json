@@ -1,0 +1,30 @@
+{
+  "_note": "SYNTHETIC EXAMPLE - portfolio only",
+  "synthetic_notice": "SYNTHETIC EXAMPLE: This file is synthetic and provided for portfolio demonstration only.",
+  "profile": {
+    "age_range": "25-45",
+    "background": "operations coordinator",
+    "goal_timeline_months": 9
+  },
+  "module_1_context": {
+    "prior_ai_exposure": "light",
+    "motivation": "career transition",
+    "constraints": [
+      "part-time learning window",
+      "limited budget"
+    ]
+  },
+  "module_2_work_style": {
+    "prefers_structure": true,
+    "enjoys_exploration": false,
+    "likes_explaining": true
+  },
+  "module_3_tolerance": {
+    "debugging_tolerance": "medium",
+    "ambiguity_tolerance": "low"
+  },
+  "module_4_expectations": {
+    "weekly_hours": 7,
+    "short_term_success": "first internal automation use case"
+  }
+}
