@@ -1,5 +1,7 @@
 # AI Decision Support System
 
+> **Portfolio context, October 2026:** This is an earlier workflow design case study. Current Microsoft 365 applications, automation services and demonstrations are at [Klimek Automation](https://klimekautomation.pl). Power Platform mappings below are conceptual; they do not establish a deployed app or flow.
+
 ## 1. Problem
 People starting in AI often choose a path too early, based on hype or incomplete self-assessment. That leads to mismatched learning plans, frustration, and wasted effort.
 
